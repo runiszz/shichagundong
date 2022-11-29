@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="./images/stars.png" id="stars" alt="">
+        <img src="./images/moon.png" id="moon" alt="">
+        <img src="./images/mountains_behind.png" id="mountains_behind" alt="">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="./images/mountains_front.png" id="mountains_front" alt="">
+    </section>
+    <div class="sec" id="sec">
+        <h2>心若没有栖息的地方，到那里都是流浪</h2>
+        <p>人是一种奇怪的动物，为什么人会有这么多烦恼?还会有这么多困难?这个问题可能一直到我死都无法得出答案。倘若我见到上帝，见到真主，见到佛祖，那么我会把这个问题带给他们。</p>
+
+        　　<p>
+            在我小的时候，母亲就告诉我，人生在世就像一条没有帆的小船在茫茫大海中漂泊，你拥有它，却无法驾驭它。只能让它慢慢地飘，你能知道前面会有什么吗?阳光?风雨?可以暂时落脚的小岛?或是可以安家的陆地?不!你永远都无法预知。可能风雨过后就是阳光，也有可能是接连不断的风雨。
+        </p>
+        　　<p>假如你看到了陆地，而那片陆地却笼罩在风雨中，你正在由于是否登上陆地时却出现了阳光明媚的小岛。你就会面临人生方向的选择：是在风雨中落地安家或是在阳光明媚的小岛上享受片刻的安逸呢?</p>
+        　<p>　假如你选的是前者，那么你是一个勇敢的人，你要为你的选择而负责，勇敢地走下去吧·相信总有一天阳光会来临，不过，也有可能你的一声都在风雨之中，过去已不能回头，有很多人正在冒风前进、淋雨拼搏，有不少的人成功了，迎来了人生最灿烂的时刻，在为当初的选择感到庆幸。也有不少的人被风吹得面目全非，被雨打得支离破碎，对当初的选择悔恨不已。
+        </p>
+        <p>在选择小岛与陆地时，也有人会选择暂时的安逸，夺得一时的逍遥。很有可能在不久以后，风雨来时，海水吞没小岛，吞没你的人生。还有另外一种罕见的情况，你选择小岛后，你的人生从此安逸快乐，直到你的人生结束，风雨都没有来临。
+        </p>
+        　<p>说了这么多，你可能会长叹一声，抱怨老天如此不公，但这并不能改变什么。人在更多时候还是需要承受，承受阳光，承受风雨，承受快乐，承受挫折。</p>
+
+
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header')
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px'
+            moon.style.top = value * 1.05 + 'px'
+            mountains_behind.style.top = value * 0.5 + 'px'
+            mountains_front.style.top = value * 0 + 'px'
+            text.style.marginRight = value * 4 + 'px'
+            stars.style.marginTop = value * 1.5 + 'px'
+            btn.style.marginTop = value * 1.5 + 'px'
+            header.style.top = value * 0.5 + 'px'
+
+        })
+    </script>
+</body>
+
+</html>
